@@ -119,10 +119,10 @@ async function fixIndexes() {
   try {
     console.log('🔄 Connecting to MongoDB...');
     // Connection string check: Ensure it has a DB name
-    await mongoose.connect(MONGODB_URI);
+    await mongoose.connect(MONGODB_URI, { dbName: 'chugli' });
     console.log('✅ Connected to MongoDB!');
 
-    const db = mongoose.connection.db;
+    const db = mongoose.connection.useDb('chugli').db;
     const dbName = mongoose.connection.name;
     console.log(`📦 Using Database: ${dbName}`);
 
