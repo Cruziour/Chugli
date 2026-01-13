@@ -12,6 +12,7 @@
     "start": "node src/server.js",
     "test": "echo \"No tests yet\"",
     "postbuild": "node src/scripts/fix-indexes.js",
+    "script": "node src/scripts/fix-indexes.js",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
